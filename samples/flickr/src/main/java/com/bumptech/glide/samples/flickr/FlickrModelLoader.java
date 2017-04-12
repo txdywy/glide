@@ -48,7 +48,8 @@ public class FlickrModelLoader extends BaseGlideUrlLoader<Photo> {
 
   @Override
   protected String getUrl(Photo model, int width, int height, Options options) {
-    return Api.getPhotoURL(model, width, height);
+    return "https://ig-s-b-a.akamaihd.net/hphotos-ak-xta1/t51.2885-15/e35/17495355_204095713419293_5015082622611619840_n.jpg";
+    //return Api.getPhotoURL(model, width, height);
   }
 
   @Override
