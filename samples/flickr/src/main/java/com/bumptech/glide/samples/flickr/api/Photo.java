@@ -60,7 +60,7 @@ public class Photo implements Parcelable {
 
   public String getPartialUrl() {
     if (partialUrl == null) {
-      partialUrl = Api.getCacheableUrl(this);
+      partialUrl = MeiApi.getCacheableUrl(this);
     }
     return partialUrl;
   }

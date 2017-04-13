@@ -8,6 +8,7 @@ import com.bumptech.glide.load.model.ModelLoaderFactory;
 import com.bumptech.glide.load.model.MultiModelLoaderFactory;
 import com.bumptech.glide.load.model.stream.BaseGlideUrlLoader;
 import com.bumptech.glide.samples.flickr.api.Api;
+import com.bumptech.glide.samples.flickr.api.MeiApi;
 import com.bumptech.glide.samples.flickr.api.Photo;
 import java.io.InputStream;
 import java.util.List;
@@ -48,8 +49,9 @@ public class FlickrModelLoader extends BaseGlideUrlLoader<Photo> {
 
   @Override
   protected String getUrl(Photo model, int width, int height, Options options) {
-    return "https://ig-s-b-a.akamaihd.net/hphotos-ak-xta1/t51.2885-15/e35/17495355_204095713419293_5015082622611619840_n.jpg";
+    //return "https://ig-s-b-a.akamaihd.net/hphotos-ak-xta1/t51.2885-15/e35/17495355_204095713419293_5015082622611619840_n.jpg";
     //return Api.getPhotoURL(model, width, height);
+    return MeiApi.getPhotoURL(model, width, height);
   }
 
   @Override
