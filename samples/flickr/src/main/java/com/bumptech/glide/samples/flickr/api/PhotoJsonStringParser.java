@@ -23,4 +23,16 @@ final class PhotoJsonStringParser {
 
     return results;
   }
+
+  List<Photo> mei_parse(String response) throws JSONException {
+    JSONObject searchResults =
+            new JSONObject(response.substring(FLICKR_API_PREFIX_LENGTH, response.length() - 1));
+    JSONArray photos = searchResults.getJSONObject("photos").getJSONArray("photo");
+    List<Photo> results = new ArrayList<>(photos.length());
+    for (int i = 0, size = photos.length(); i < size; i++) {
+      results.add(new Photo(photos.getJSONObject(i)));
+    }
+
+    return results;
+  }
 }

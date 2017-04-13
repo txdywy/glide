@@ -27,7 +27,7 @@ final class MeiQueryResponseListener implements Response.Listener<String>,
   @Override
   public void onResponse(String response) {
     try {
-      notifySuccess(parser.parse(response));
+      notifySuccess(parser.mei_parse(response));
     } catch (JSONException e) {
       notifyFailed(e);
     }

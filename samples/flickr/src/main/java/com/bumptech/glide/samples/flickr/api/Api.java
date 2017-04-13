@@ -1,6 +1,7 @@
 package com.bumptech.glide.samples.flickr.api;
 
 import android.content.Context;
+import android.util.Log;
 import android.util.SparseArray;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -182,6 +183,7 @@ public class Api {
   }
 
   public void query(Query query) {
+      Log.d("hahaha",query.getUrl());
     if (lastQueryResult != null && lastQueryResult.query.equals(query)) {
       for (QueryListener listener : queryListeners) {
         listener.onSearchCompleted(lastQueryResult.query, lastQueryResult.results);

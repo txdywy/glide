@@ -32,7 +32,7 @@ public final class RecentQuery implements Query {
 
   @Override
   public String getUrl() {
-    return Api.getRecentUrl();
+    return MeiApi.getRecentUrl();
   }
 
   @Override

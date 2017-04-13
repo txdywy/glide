@@ -91,7 +91,8 @@ public class MeiApi {
 
   public static String getCacheableUrl(Photo photo) {
     //return String.format(CACHEABLE_PHOTO_URL, photo.getFarm(), photo.getServer(), photo.getId(), photo.getSecret());
-    return CACHEABLE_PHOTO_URL + "17495355_204095713419293_5015082622611619840_n.jpg";
+    //return CACHEABLE_PHOTO_URL + "17495355_204095713419293_5015082622611619840_n.jpg";
+    return CACHEABLE_PHOTO_URL + photo.getSecret();
   }
 
   public static String getPhotoURL(Photo photo, int width, int height) {
@@ -125,7 +126,8 @@ public class MeiApi {
   }
 
   static String getRecentUrl() {
-    return getUrlForMethod("flickr.photos.getRecent" + PER_PAGE);
+    //return getUrlForMethod("flickr.photos.getRecent" + PER_PAGE);
+    return "http://mei12356.com/recent";
   }
 
   /**
