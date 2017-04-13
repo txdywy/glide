@@ -43,7 +43,7 @@ public final class SearchQuery implements Query {
 
   @Override
   public String getUrl() {
-    return Api.getSearchUrl(queryString);
+    return MeiApi.getSearchUrl(queryString);
   }
 
   @Override
