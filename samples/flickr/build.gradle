@@ -18,7 +18,7 @@ android {
     buildToolsVersion BUILD_TOOLS_VERSION as String
 
     defaultConfig {
-        applicationId 'com.mei12356.init'
+        applicationId 'com.pgg2017.init'
         minSdkVersion MIN_SDK_VERSION as int
         targetSdkVersion TARGET_SDK_VERSION as int
 
@@ -34,5 +34,5 @@ android {
 
 task run(type: Exec, dependsOn: 'installDebug') {
     description 'Installs the APK and runs the main activity: "gradlew :samples:???:run"'
-    commandLine "${android.sdkDirectory}/platform-tools/adb", 'shell', 'am', 'start', '-n', 'com.mei12356.init/.FlickrSearchActivity'
+    commandLine "${android.sdkDirectory}/platform-tools/adb", 'shell', 'am', 'start', '-n', 'com.pgg2017.init/.FlickrSearchActivity'
 }
