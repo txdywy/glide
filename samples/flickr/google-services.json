@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "129268327674",
+    "firebase_url": "https://fp2017-50eae.firebaseio.com",
+    "project_id": "fp2017-50eae",
+    "storage_bucket": "fp2017-50eae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129268327674:android:ea7835c444f64dec",
+        "android_client_info": {
+          "package_name": "com.funpic2017.go"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129268327674-hav4dgke2jl4h199qh4on62uroq7ipbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxfA8-e0ZvZFupCGXAiQF7m_yg66C69wM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

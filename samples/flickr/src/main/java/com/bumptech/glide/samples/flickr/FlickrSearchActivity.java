@@ -31,6 +31,9 @@ import com.bumptech.glide.samples.flickr.api.Photo;
 import com.bumptech.glide.samples.flickr.api.Query;
 import com.bumptech.glide.samples.flickr.api.RecentQuery;
 import com.bumptech.glide.samples.flickr.api.SearchQuery;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -120,6 +123,7 @@ public class FlickrSearchActivity extends AppCompatActivity
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
     StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
         .detectAll()
         .penaltyLog()
@@ -161,6 +165,9 @@ public class FlickrSearchActivity extends AppCompatActivity
           new PreFillType.Builder(mediumGridSize).setWeight(1),
           new PreFillType.Builder(screenWidth / 2, listHeightSize).setWeight(6));
     }
+    AdView mAdView = (AdView) findViewById(R.id.adView);
+    AdRequest adRequest = new AdRequest.Builder().build();
+    mAdView.loadAd(adRequest);
   }
 
   private int getScreenWidth() {

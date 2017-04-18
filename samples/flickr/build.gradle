@@ -11,7 +11,10 @@ dependencies {
     compile "com.android.support:appcompat-v7:${SUPPORT_V7_VERSION}"
     compile "com.mcxiaoke.volley:library:${VOLLEY_VERSION}"
     compile "com.android.support:recyclerview-v7:${SUPPORT_V7_VERSION}"
+    compile 'com.google.firebase:firebase-ads:10.0.1'
 }
+
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
