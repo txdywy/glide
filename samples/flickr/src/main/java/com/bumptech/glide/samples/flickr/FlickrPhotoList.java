@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -108,6 +109,12 @@ public class FlickrPhotoList extends Fragment implements PhotoViewer {
 
   @Override
   public void onSaveInstanceState(Bundle outState) {
+    //to show Interstitial Ad
+    //pop up when enlarge photo
+    ((FlickrSearchActivity)getActivity()).showInterAd();
+    //Log.d("haha","onSaveInstanceState");
+
+
     super.onSaveInstanceState(outState);
     if (list != null) {
       int index = layoutManager.findFirstVisibleItemPosition();
@@ -134,6 +141,8 @@ public class FlickrPhotoList extends Fragment implements PhotoViewer {
 
     @Override
     public PhotoTitleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        ((FlickrSearchActivity)getActivity()).showInterAd();
+        Log.d("haha","onCreateViewHolder");
       View view = inflater.inflate(R.layout.flickr_photo_list_item, parent, false);
       PhotoTitleViewHolder vh = new PhotoTitleViewHolder(view);
       preloadSizeProvider.setView(vh.imageView);

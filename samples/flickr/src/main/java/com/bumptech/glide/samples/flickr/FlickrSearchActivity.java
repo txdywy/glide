@@ -31,8 +31,10 @@ import com.bumptech.glide.samples.flickr.api.Photo;
 import com.bumptech.glide.samples.flickr.api.Query;
 import com.bumptech.glide.samples.flickr.api.RecentQuery;
 import com.bumptech.glide.samples.flickr.api.SearchQuery;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -64,6 +66,8 @@ public class FlickrSearchActivity extends AppCompatActivity
   private Handler backgroundHandler;
   private SearchView searchView;
   private Query currentQuery;
+  private InterstitialAd mInterstitialAd;
+  private long AdInterTs;
 
   private enum Page {
     SMALL,
@@ -107,6 +111,7 @@ public class FlickrSearchActivity extends AppCompatActivity
 
   @Override
   public boolean onQueryTextSubmit(String query) {
+    showInterAd();
     executeSearch(query);
     searchView.setQuery("", false /*submit*/);
     return true;
@@ -122,6 +127,18 @@ public class FlickrSearchActivity extends AppCompatActivity
    */
   @Override
   public void onCreate(Bundle savedInstanceState) {
+    this.AdInterTs = System.currentTimeMillis();
+    mInterstitialAd = new InterstitialAd(this);
+    mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+
+    mInterstitialAd.setAdListener(new AdListener() {
+      @Override
+      public void onAdClosed() {
+        requestNewInterstitial();
+        Log.d("hahaha", "ad closed");
+      }
+    });
+    requestNewInterstitial();
     super.onCreate(savedInstanceState);
 
     StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
@@ -168,6 +185,39 @@ public class FlickrSearchActivity extends AppCompatActivity
     AdView mAdView = (AdView) findViewById(R.id.adView);
     AdRequest adRequest = new AdRequest.Builder().build();
     mAdView.loadAd(adRequest);
+
+
+
+    showInterAd();
+
+  }
+
+  private void requestNewInterstitial() {
+    //Log.d("hahaha", AdRequest.DEVICE_ID_EMULATOR);
+    AdRequest adRequest = new AdRequest.Builder()
+            .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+            .build();
+
+    mInterstitialAd.loadAd(adRequest);
+  }
+
+  public void showInterAd() {
+    long ts = System.currentTimeMillis();
+    long elapsed = ts - this.AdInterTs;
+    if (elapsed > 50 * 1000){
+      this.AdInterTs = ts;
+    }
+    else{
+      Log.d("hahaha", "time too short " + elapsed);
+      return;
+    }
+    if (mInterstitialAd.isLoaded()) {
+      mInterstitialAd.show();
+      Log.d("hahaha", "ad 111");
+    }
+    else{
+      Log.d("hahaha", "ad 222");
+    }
   }
 
   private int getScreenWidth() {
@@ -315,6 +365,8 @@ public class FlickrSearchActivity extends AppCompatActivity
     }
 
     private Fragment pageToFragment(int position) {
+      Log.d("hahaha", Integer.toString(position));
+      //showInterAd();
       Page page = Page.values()[position];
       if (page == Page.SMALL) {
         int pageSize = getPageSize(R.dimen.small_photo_side);

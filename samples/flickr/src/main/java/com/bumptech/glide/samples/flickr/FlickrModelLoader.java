@@ -1,5 +1,7 @@
 package com.bumptech.glide.samples.flickr;
 
+import android.util.Log;
+
 import com.bumptech.glide.load.Options;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.load.model.ModelCache;
@@ -51,6 +53,7 @@ public class FlickrModelLoader extends BaseGlideUrlLoader<Photo> {
   protected String getUrl(Photo model, int width, int height, Options options) {
     //return "https://ig-s-b-a.akamaihd.net/hphotos-ak-xta1/t51.2885-15/e35/17495355_204095713419293_5015082622611619840_n.jpg";
     //return Api.getPhotoURL(model, width, height);
+    //Log.d("haha", "???url");
     return MeiApi.getPhotoURL(model, width, height);
   }
 
