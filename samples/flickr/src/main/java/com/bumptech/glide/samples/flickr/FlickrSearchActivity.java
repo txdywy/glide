@@ -129,7 +129,7 @@ public class FlickrSearchActivity extends AppCompatActivity
   public void onCreate(Bundle savedInstanceState) {
     this.AdInterTs = System.currentTimeMillis();
     mInterstitialAd = new InterstitialAd(this);
-    mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+    mInterstitialAd.setAdUnitId("ca-app-pub-7366328858638561/6816376338");
 
     mInterstitialAd.setAdListener(new AdListener() {
       @Override
@@ -204,19 +204,19 @@ public class FlickrSearchActivity extends AppCompatActivity
   public void showInterAd() {
     long ts = System.currentTimeMillis();
     long elapsed = ts - this.AdInterTs;
-    if (elapsed > 50 * 1000){
+    if (elapsed > 3 * 60 * 1000){
       this.AdInterTs = ts;
     }
     else{
-      Log.d("hahaha", "time too short " + elapsed);
+      Log.d("hahaha", "time too short " + elapsed/1000);
       return;
     }
     if (mInterstitialAd.isLoaded()) {
       mInterstitialAd.show();
-      Log.d("hahaha", "ad 111");
+      Log.d("hahaha", "ad 111 ready");
     }
     else{
-      Log.d("hahaha", "ad 222");
+      Log.d("hahaha", "ad 222 not ready");
     }
   }
 
@@ -365,7 +365,7 @@ public class FlickrSearchActivity extends AppCompatActivity
     }
 
     private Fragment pageToFragment(int position) {
-      Log.d("hahaha", Integer.toString(position));
+      //Log.d("hahaha", Integer.toString(position));
       //showInterAd();
       Page page = Page.values()[position];
       if (page == Page.SMALL) {

@@ -141,8 +141,9 @@ public class FlickrPhotoList extends Fragment implements PhotoViewer {
 
     @Override
     public PhotoTitleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        //often trigger for large list
         ((FlickrSearchActivity)getActivity()).showInterAd();
-        Log.d("haha","onCreateViewHolder");
+        //Log.d("haha","onCreateViewHolder");
       View view = inflater.inflate(R.layout.flickr_photo_list_item, parent, false);
       PhotoTitleViewHolder vh = new PhotoTitleViewHolder(view);
       preloadSizeProvider.setView(vh.imageView);

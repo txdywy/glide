@@ -183,7 +183,7 @@ public class Api {
   }
 
   public void query(Query query) {
-      Log.d("hahaha",query.getUrl());
+      //Log.d("hahaha",query.getUrl());
     if (lastQueryResult != null && lastQueryResult.query.equals(query)) {
       for (QueryListener listener : queryListeners) {
         listener.onSearchCompleted(lastQueryResult.query, lastQueryResult.results);
