@@ -21,7 +21,7 @@ android {
     buildToolsVersion BUILD_TOOLS_VERSION as String
 
     defaultConfig {
-        applicationId 'com.pg2046.go'
+        applicationId 'com.dance.queen'
         minSdkVersion MIN_SDK_VERSION as int
         targetSdkVersion TARGET_SDK_VERSION as int
 
@@ -37,5 +37,5 @@ android {
 
 task run(type: Exec, dependsOn: 'installDebug') {
     description 'Installs the APK and runs the main activity: "gradlew :samples:???:run"'
-    commandLine "${android.sdkDirectory}/platform-tools/adb", 'shell', 'am', 'start', '-n', 'com.pg2046.go/.FlickrSearchActivity'
+    commandLine "${android.sdkDirectory}/platform-tools/adb", 'shell', 'am', 'start', '-n', 'com.dance.queen/.FlickrSearchActivity'
 }

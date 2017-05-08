@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "75511406277",
-    "firebase_url": "https://pg2046-e705f.firebaseio.com",
-    "project_id": "pg2046-e705f",
-    "storage_bucket": "pg2046-e705f.appspot.com"
+    "project_number": "244457430610",
+    "firebase_url": "https://dance-queen.firebaseio.com",
+    "project_id": "dance-queen",
+    "storage_bucket": "dance-queen.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:75511406277:android:91089b00a87baeaa",
+        "mobilesdk_app_id": "1:244457430610:android:03709e792df6b817",
         "android_client_info": {
-          "package_name": "com.pg2046.go"
+          "package_name": "com.dance.queen"
         }
       },
       "oauth_client": [
         {
-          "client_id": "75511406277-kthl26mp31cp5mdnttl2lv9vlamgt09j.apps.googleusercontent.com",
+          "client_id": "244457430610-u8bfmlbsgg3uthgtk49cn29eprbbg77m.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBUmf5dW0a3bFk2e0L3PpRlcm9ZvmMOjwM"
+          "current_key": "AIzaSyAKz8bO1_9Ifc0VPJ55auO8STzOLS_QLcw"
         }
       ],
       "services": {

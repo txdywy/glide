@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">PG2046</string>
+  <string name="app_name">京城舞王</string>
   <string name="search">Search</string>
-  <string name="searching_for">Searching for \"%s\" on PG2046</string>
-  <string name="search_failed">Search for \"%s\" failed, check your network connection and try again</string>
-  <string name="small">Small</string>
-  <string name="medium">Medium</string>
-  <string name="list">List</string>
-  <string name="image_description">An image from the list of results for a search query</string>
-  <string name="fullscreen_description">Full screen view of an image</string>
-  <string name="banner_ad_unit_id">ca-app-pub-7366328858638561/5219415131</string>
+  <string name="searching_for">在京城舞王搜索 \"%s\" </string>
+  <string name="search_failed">搜索 \"%s\" 失败, 网络不好， 请重试</string>
+  <string name="small">小图</string>
+  <string name="medium">中图</string>
+  <string name="list">大图</string>
+  <string name="image_description">舞动京城</string>
+  <string name="fullscreen_description">全屏舞王</string>
+  <string name="banner_ad_unit_id">ca-app-pub-7366328858638561/2634915136</string>
 </resources>
