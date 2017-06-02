@@ -194,9 +194,7 @@ public class FlickrSearchActivity extends AppCompatActivity
 
   private void requestNewInterstitial() {
     //Log.d("hahaha", AdRequest.DEVICE_ID_EMULATOR);
-    AdRequest adRequest = new AdRequest.Builder()
-            .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-            .build();
+    AdRequest adRequest = new AdRequest.Builder().build();
 
     mInterstitialAd.loadAd(adRequest);
   }
