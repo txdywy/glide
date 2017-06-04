@@ -129,7 +129,8 @@ public class FlickrSearchActivity extends AppCompatActivity
   public void onCreate(Bundle savedInstanceState) {
     this.AdInterTs = System.currentTimeMillis();
     mInterstitialAd = new InterstitialAd(this);
-    mInterstitialAd.setAdUnitId("ca-app-pub-7366328858638561/5588381532");
+    //mInterstitialAd.setAdUnitId("ca-app-pub-7366328858638561/5588381532");
+    mInterstitialAd.setAdUnitId("ca-app-pub-9941563777656289/9639470850");
 
     mInterstitialAd.setAdListener(new AdListener() {
       @Override
