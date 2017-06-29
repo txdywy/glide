@@ -24,7 +24,7 @@ public class MeiApi {
   private static final String TAG = "MeiApi";
   private static final String API_KEY = "f0e6fbb5fdf1f3842294a1d21f84e8a6";
   private static final String SIGNED_API_URL =
-      "http://mei12356.com/api/?method=%s&format=json&api_key=" + API_KEY;
+      "http://mei12356.ml/api/?method=%s&format=json&api_key=" + API_KEY;
   // Incomplete size independent url for photos that can be cached per photo
   //private static final String CACHEABLE_PHOTO_URL = "http://farm%s.staticflickr.com/%s/%s_%s_";
   private static final String CACHEABLE_PHOTO_URL = "https://ig-s-b-a.akamaihd.net/hphotos-ak-xta1/t51.2885-15/e35/";
@@ -123,12 +123,12 @@ public class MeiApi {
 
   static String getSearchUrl(String text) {
     //return getUrlForMethod("flickr.photos.search") + "&text=" + text + PER_PAGE;
-    return "http://mei12356.com/recent";
+    return "http://mei12356.ml/recent";
   }
 
   static String getRecentUrl() {
     //return getUrlForMethod("flickr.photos.getRecent" + PER_PAGE);
-    return "http://mei12356.com/recent";
+    return "http://mei12356.ml/recent";
   }
 
   /**
