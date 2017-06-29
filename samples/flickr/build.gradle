@@ -21,12 +21,12 @@ android {
     buildToolsVersion BUILD_TOOLS_VERSION as String
 
     defaultConfig {
-        applicationId 'com.pg2046.go'
+        applicationId 'com.hgxi.one'
         minSdkVersion MIN_SDK_VERSION as int
         targetSdkVersion TARGET_SDK_VERSION as int
 
-        versionCode 12
-        versionName '1.2'
+        versionCode 10
+        versionName '1.0'
     }
 
     compileOptions {
