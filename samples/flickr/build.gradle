@@ -21,7 +21,7 @@ android {
     buildToolsVersion BUILD_TOOLS_VERSION as String
 
     defaultConfig {
-        applicationId 'com.hgxi.one'
+        applicationId 'com.hgxx.go'
         minSdkVersion MIN_SDK_VERSION as int
         targetSdkVersion TARGET_SDK_VERSION as int
 

@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "1004655072960",
-    "firebase_url": "https://hot-girls-xi.firebaseio.com",
-    "project_id": "hot-girls-xi",
-    "storage_bucket": "hot-girls-xi.appspot.com"
+    "project_number": "824866242262",
+    "firebase_url": "https://hot-girls-xx.firebaseio.com",
+    "project_id": "hot-girls-xx",
+    "storage_bucket": "hot-girls-xx.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1004655072960:android:ccb369f909036b0b",
+        "mobilesdk_app_id": "1:824866242262:android:a58fb27ac7752e5a",
         "android_client_info": {
-          "package_name": "com.hgxi.one"
+          "package_name": "com.hgxx.go"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1004655072960-i5d1h2vj22pn7ti4bogt692l91ooasbd.apps.googleusercontent.com",
+          "client_id": "824866242262-ou7grafquu8fh6napstqbc3bq4n2hk9l.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD44wIQFFJpcx7JCwTRL5nOuVBxstqRoZs"
+          "current_key": "AIzaSyBpfypKwbvOK5PsdjTRGWgYIzeoeh3uDOo"
         }
       ],
       "services": {
