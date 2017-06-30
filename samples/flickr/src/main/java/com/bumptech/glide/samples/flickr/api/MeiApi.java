@@ -123,12 +123,12 @@ public class MeiApi {
 
   static String getSearchUrl(String text) {
     //return getUrlForMethod("flickr.photos.search") + "&text=" + text + PER_PAGE;
-    return "http://mei12356.ml/recent";
+    return "http://mei12356.ml/recent1";
   }
 
   static String getRecentUrl() {
     //return getUrlForMethod("flickr.photos.getRecent" + PER_PAGE);
-    return "http://mei12356.ml/recent";
+    return "http://mei12356.ml/recent1";
   }
 
   /**
